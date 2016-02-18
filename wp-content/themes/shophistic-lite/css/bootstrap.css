@@ -1075,7 +1075,7 @@ body {
   font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #9B5301;
+  color: #4d4d4d;
   background-color: #f0f0f0;
 }
 input,
@@ -1925,7 +1925,7 @@ pre code {
     width: 83.33333333%;
   }
   .col-md-9 {
-    width: 85%;
+    width: 75%;
   }
   .col-md-8 {
     width: 66.66666667%;
@@ -1943,7 +1943,7 @@ pre code {
     width: 33.33333333%;
   }
   .col-md-3 {
-    width: 15%;
+    width: 25%;
   }
   .col-md-2 {
     width: 16.66666667%;
@@ -4233,9 +4233,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 6px 5px 30px 110px !important;
-    border-bottom: 2px solid #777;
-    border-color: #6E4903;
+    margin: 0;
   }
   .navbar-nav > li {
     float: left;
@@ -4244,7 +4242,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-top: 14px;
     padding-bottom: 14px;
   }
-  
 }
 .navbar-form {
   margin-left: -20px;

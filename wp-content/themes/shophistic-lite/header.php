@@ -33,8 +33,7 @@
 
                             <div class="logo_container">
                                 <a href="<?php echo home_url(); ?>/" class="ql_logo google-font">
-                                <img src="http://sili.moscow-n.ru/wp-content/images/logo2.png" />
-                                <?php // bloginfo('name'); ?>
+                                <?php bloginfo('name'); ?>
                                 </a>
                                 <button id="ql_nav_btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ql-navigation" aria-expanded="false">
                                             <span class="sr-only">Toggle navigation</span>
@@ -90,10 +89,10 @@
                                 </div>
                                 <div class="login_btn_wrap">
                                     <?php if ( is_user_logged_in() ) { ?>
-                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>" title="Личный Кабинет<?php //esc_attr_e( 'My Account', 'shophistic-lite' ); ?>">Личный Кабинет<?php // esc_html_e( 'My Account', 'shophistic-lite' ); ?></a>
+                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>" title="<?php esc_attr_e( 'My Account', 'shophistic-lite' ); ?>"><?php esc_html_e( 'My Account', 'shophistic-lite' ); ?></a>
                                      <?php } 
                                      else { ?>
-                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Вход в личный кабинет<?php // esc_attr_e( 'Login', 'shophistic-lite' ); ?>">Войти - <?php // esc_html_e( 'Login', 'shophistic-lite' ); ?></a>
+                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="<?php esc_attr_e( 'Login', 'shophistic-lite' ); ?>"><?php esc_html_e( 'Login', 'shophistic-lite' ); ?></a>
                                      <?php } ?>
                                 </div>
                                 <div class="clearfix"></div>

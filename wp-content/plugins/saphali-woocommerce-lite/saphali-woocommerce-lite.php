@@ -3,7 +3,7 @@
 Plugin Name: Saphali Woocommerce Russian
 Plugin URI: http://saphali.com/saphali-woocommerce-plugin-wordpress
 Description: Saphali Woocommerce Russian - это бесплатный вордпресс плагин, который добавляет набор дополнений к интернет-магазину на Woocommerce.
-Version: 1.5.9
+Version: 1.6.0
 Author: Saphali
 Author URI: http://saphali.com/
 Text Domain: saphali-woocommerce-lite
@@ -31,9 +31,11 @@ Domain Path: /languages
 
 /* Add a custom payment class to woocommerce
   ------------------------------------------------------------ */
+  define('SAPHALI_LITE_SYMBOL', 1 );
+  
   // Подключение валюты и локализации
  define('SAPHALI_PLUGIN_DIR_URL',plugin_dir_url(__FILE__));
- define('SAPHALI_LITE_VERSION', '1.5.9' );
+ define('SAPHALI_LITE_VERSION', '1.6.0' );
  define('SAPHALI_PLUGIN_DIR_PATH',plugin_dir_path(__FILE__));
  class saphali_lite {
  var $email_order_id;
@@ -228,7 +230,7 @@ Domain Path: /languages
 	function add_inr_currency( $currencies ) {
 		$currencies['UAH'] = __( 'Ukrainian hryvnia', 'saphali-woocommerce-lite' );
 		$currencies['RUR'] = __( 'Russian ruble', 'saphali-woocommerce-lite' );
-		if( version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) )
+		if( version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) || SAPHALI_LITE_SYMBOL )
 		$currencies['RUB'] = __( 'Russian ruble', 'saphali-woocommerce-lite' );
 		$currencies['BYR'] = __( 'Belarusian ruble', 'saphali-woocommerce-lite' );
 		$currencies['AMD'] = __( 'Armenian dram  (Դրամ)', 'saphali-woocommerce-lite' );
@@ -242,10 +244,10 @@ Domain Path: /languages
 		if(empty($currency))
 		$currency = get_option( 'woocommerce_currency' );
 		if(isset($currency)) {
-			if( version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) )
+			if( version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) || SAPHALI_LITE_SYMBOL )
 			switch( $currency ) {
 				case 'UAH': $symbol = '&#x433;&#x440;&#x43D;.'; break;
-				case 'RUB': $symbol = '&#8381;'; break;
+				case 'RUB': $symbol = '<span class=rur >&#x440;<span>&#x443;&#x431;.</span></span>'; break;
 				case 'RUR': $symbol = '&#x440;&#x443;&#x431;.'; break;
 				case 'BYR': $symbol = '&#x440;&#x443;&#x431;.'; break;
 				case 'AMD': $symbol = '&#x534;'; break;
@@ -1321,9 +1323,9 @@ if ( ! function_exists( 'woocommerce_lang_s_l' ) ) {
 }
 //END
 
-// add_action("wp_head", '_print_script_columns', 10, 1);
+add_action("wp_head", '_print_script_columns', 10, 1);
 function _print_script_columns() {
-		if(apply_filters( 'woocommerce_currency', get_option('woocommerce_currency') ) != 'RUB' || !version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) ) return;
+		if(apply_filters( 'woocommerce_currency', get_option('woocommerce_currency') ) != 'RUB' || !(version_compare( WOOCOMMERCE_VERSION, '2.5.2', '<' ) || SAPHALI_LITE_SYMBOL ) ) return;
 		?>
 	<style type="text/css">
 		@font-face { font-family: "Rubl Sign"; src: url(<?php echo SAPHALI_PLUGIN_DIR_URL; ?>ruble.eot); }

@@ -4,12 +4,8 @@
                 <footer id="footer" class="container">
                     <div class="sub_footer">
                             
-                        <p style="font-size: 1.6rem;"> Магазин Цветов - 
-                        <?php bloginfo('name'); 
-                         bloginfo('description');
-                        /*esc_html_e( 'Powered by ', 'shophistic-lite' ); ?><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shophistic-lite' ) ); ?>"><?php esc_html_e( 'WordPress', 'shophistic-lite' ); ?></a>. <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shophistic-lite' ), 'Shophistic Lite', '<a href="https://www.quemalabs.com/" rel="designer">Quema Labs</a>' ); 
-                        */
-                        ?>
+                        <p>
+                        <?php esc_html_e( 'Powered by ', 'shophistic-lite' ); ?><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shophistic-lite' ) ); ?>"><?php esc_html_e( 'WordPress', 'shophistic-lite' ); ?></a>. <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shophistic-lite' ), 'Shophistic Lite', '<a href="https://www.quemalabs.com/" rel="designer">Quema Labs</a>' ); ?>
                         </p>
 
                         <?php get_template_part( '/templates/menu', 'social' ); ?>
