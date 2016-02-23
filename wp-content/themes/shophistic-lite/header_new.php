@@ -13,8 +13,6 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script type='text/javascript' src='http://sili.moscow-n.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 
    <!-- WP_Head -->
     	<?php wp_head(); ?>
@@ -35,8 +33,7 @@
 
                             <div class="logo_container">
                                 <a href="<?php echo home_url(); ?>/" class="ql_logo google-font">
-                                <img src="http://sili.moscow-n.ru/wp-content/images/logo2.png" />
-                                <?php // bloginfo('name'); ?>
+                                <?php bloginfo('name'); ?>
                                 </a>
                                 <button id="ql_nav_btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ql-navigation" aria-expanded="false">
                                             <span class="sr-only">Toggle navigation</span>
@@ -77,7 +74,6 @@
                         ?>
                             <div class="login_cart_wrap col-md-3 col-xs-12">
                                 
-                             <a title="Корзина" href="http://sili.moscow-n.ru/cart/">
                                 <div class="ql_cart_wrap">
                                     <button href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" class="ql_cart-btn">
                                         <?php echo wp_kses_post( WC()->cart->get_cart_total() ); ?>
@@ -91,13 +87,12 @@
                                         <?php the_widget('WC_Widget_Cart');  ?>
                                     </div><!-- /ql_woo_cart --> 
                                 </div>
-                             </a>
                                 <div class="login_btn_wrap">
                                     <?php if ( is_user_logged_in() ) { ?>
-                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>" title="Личный Кабинет<?php //esc_attr_e( 'My Account', 'shophistic-lite' ); ?>">Личный Кабинет<?php // esc_html_e( 'My Account', 'shophistic-lite' ); ?></a>
+                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>" title="<?php esc_attr_e( 'My Account', 'shophistic-lite' ); ?>"><?php esc_html_e( 'My Account', 'shophistic-lite' ); ?></a>
                                      <?php } 
                                      else { ?>
-                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Вход в личный кабинет<?php // esc_attr_e( 'Login', 'shophistic-lite' ); ?>">Войти в личный кабинет<?php // esc_html_e( 'Login', 'shophistic-lite' ); ?></a>
+                                        <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="<?php esc_attr_e( 'Login', 'shophistic-lite' ); ?>"><?php esc_html_e( 'Login', 'shophistic-lite' ); ?></a>
                                      <?php } ?>
                                 </div>
                                 <div class="clearfix"></div>

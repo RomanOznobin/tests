@@ -1075,7 +1075,7 @@ body {
   font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #9B5301;
+  color: #4d4d4d;
   background-color: #f0f0f0;
 }
 input,
@@ -1087,7 +1087,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #052a7c;
+  color: #c3a769;
   text-decoration: none;
 }
 a:hover,
@@ -1925,7 +1925,7 @@ pre code {
     width: 83.33333333%;
   }
   .col-md-9 {
-    width: 85%;
+    width: 75%;
   }
   .col-md-8 {
     width: 66.66666667%;
@@ -1943,7 +1943,7 @@ pre code {
     width: 33.33333333%;
   }
   .col-md-3 {
-    width: 15%;
+    width: 25%;
   }
   .col-md-2 {
     width: 16.66666667%;
@@ -3369,10 +3369,10 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 .collapse {
-  display: block;
+  display: none;
 }
 .collapse.in {
-  display: none;
+  display: block;
 }
 tr.collapse.in {
   display: table-row;
@@ -3404,10 +3404,8 @@ tbody.collapse.in {
 .dropup,
 .dropdown {
   position: relative;
-
 }
 .dropdown-toggle:focus {
-     display: block; 
   outline: 0;
 }
 .dropdown-menu {
@@ -3443,7 +3441,7 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 10px;
+  padding: 3px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
@@ -4206,7 +4204,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: 7px -20px;
 }
 .navbar-nav > li > a {
-  
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 22px;
@@ -4220,7 +4217,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-color: transparent;
     border: 0;
     box-shadow: none;
-    max-height: 40px;
   }
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
@@ -4237,10 +4233,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 6px 5px 30px 110px !important;
-    border-bottom: 2px solid #777;
-    border-color: #6E4903;
-    
+    margin: 0;
   }
   .navbar-nav > li {
     float: left;
@@ -4249,7 +4242,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-top: 14px;
     padding-bottom: 14px;
   }
-  
 }
 .navbar-form {
   margin-left: -20px;
