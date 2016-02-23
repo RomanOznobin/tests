@@ -19,11 +19,53 @@
    <!-- WP_Head -->
     	<?php wp_head(); ?>
    <!-- /WP_Head -->
+   
+   <!-- Scrol element - Menu -->
+   <script>var scrollFloat = function() {
+    'use strict';
+
+    var app = {};
+
+    app.init = function init(node) {
+        if (!node || node.nodeType !== 1) {
+            throw new Error(node + ' is not DOM element');
+        }
+        handleWindowScroll(node);
+    };
+
+    function handleWindowScroll(floatElement) {
+        window.onscroll = function() {
+            if (window.scrollY > floatElement.offsetTop) {
+               // alert(floatElement.style.position);
+                if (floatElement.style.position !== 'fixed') {
+                    floatElement.style.position = 'fixed';
+                    floatElement.style.top = '0';
+                    floatElement.style.right = '0px';
+                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.08)';
+                }
+            } else {
+                if (floatElement.style.position === 'fixed') {
+                    floatElement.style.position = 'relative';
+                    floatElement.style.top = '';
+                    floatElement.style.right = '';
+                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.04)';
+                }
+            }
+        };
+    }
+
+    return app;
+}();</script>
+   <!-- /Scrol element - Menu -->
+
+
 </head>
 
 
 
 <body <?php body_class(); ?>>
+
+
 
 	<div id="wrap">
 
@@ -75,7 +117,7 @@
                         <?php 
                         if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
                         ?>
-                            <div class="login_cart_wrap col-md-3 col-xs-12">
+                            <div id="my_scroll_menu" class="login_cart_wrap col-md-3 col-xs-12">
                                 
                              <a title="Корзина" href="http://sili.moscow-n.ru/cart/">
                                 <div class="ql_cart_wrap">
@@ -100,6 +142,11 @@
                                         <a class="ql_login-btn" href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" title="Вход в личный кабинет<?php // esc_attr_e( 'Login', 'shophistic-lite' ); ?>">Войти в личный кабинет<?php // esc_html_e( 'Login', 'shophistic-lite' ); ?></a>
                                      <?php } ?>
                                 </div>
+        <script>
+            var el = document.getElementById('my_scroll_menu');
+            scrollFloat.init(el);
+            alert(el.id);
+        </script>
                                 <div class="clearfix"></div>
                             </div><!-- col-md-4 -->
                         <?php } //if WooCommerce active ?>
