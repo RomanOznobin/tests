@@ -177,7 +177,7 @@
 
 
 				$(".collapse").collapse({
-				  toggle: true,
+				  toggle: false,
 				  parent: ".panel-group"
 				})
 
