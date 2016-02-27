@@ -1784,7 +1784,7 @@ msgstr "Оплатить заказ"
 
 #: templates/checkout/form-shipping.php:40
 msgid "Ship to a different address?"
-msgstr "Доставка по другому адресу?"
+msgstr "Для Юридических лиц"
 
 #: templates/checkout/payment.php:34
 msgid "Please fill in your details above to see available payment methods."

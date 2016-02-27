@@ -145,7 +145,7 @@
         <script>
             var el = document.getElementById('my_scroll_menu');
             scrollFloat.init(el);
-            alert(el.id);
+            
         </script>
                                 <div class="clearfix"></div>
                             </div><!-- col-md-4 -->
