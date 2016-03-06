@@ -1092,7 +1092,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #a08240;
+  color: #D14504;
   text-decoration: underline;
 }
 a:focus {
@@ -4239,7 +4239,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
     margin: 6px 5px 30px 110px !important;
     border-bottom: 2px solid #777;
-    border-color: #6E4903;
+    border-color: #0AE6EF;
+    background-color: rgba(0, 0, 0, 0.4);
     
   }
   .navbar-nav > li {

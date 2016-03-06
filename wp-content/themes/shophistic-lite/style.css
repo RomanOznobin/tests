@@ -35,7 +35,7 @@ LESS Variables and Mixins
 ========================================== 
 */
 #header {
-    background: url("http://sili.moscow-n.ru/wp-content/uploads/2016/01/zakaz-cvetov-512-Copy.jpg") no-repeat center;
+    background: url("./images/stroitelnie-materiali-saransk.jpg") no-repeat center;
     background-size: 100% 250px;
     
   margin-bottom: 0;
@@ -154,14 +154,14 @@ Nav Menu
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  color: #7D5301;
+  color: #0AE6EF;
   padding: 0.71428571428571em 1.07142857142857em;
   font-weight: bold;
   font-style: italic;
 }
 #jqueryslidemenu ul.nav > li > a:hover {
  background-color: rgba(0, 0, 0, 0.07);
-  color: #BC5104;
+  color: #D14504;
 }
 /* Active item ----------*/
 /*1st sub level menu*/
@@ -277,7 +277,7 @@ Login and Cart Buttons
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
     padding-top: 20px;
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 /* Login ------------*/
 .login_btn_wrap {
@@ -286,7 +286,7 @@ Login and Cart Buttons
   margin-bottom: 15px;
 }
 .ql_login-btn {
-  color: #BF3E14;
+  color: #06C4CC;
   text-transform: uppercase;
   font-size: 14px;
   font-size: 0.975rem;
@@ -303,6 +303,7 @@ Login and Cart Buttons
   float: right;
   position: relative;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
 
 }
 .ql_cart_wrap:hover {
@@ -314,6 +315,7 @@ Login and Cart Buttons
   padding: 10px 45px 10px 15px;
   margin-left: 10px;
   position: relative;
+  color: #27E064;
 }
 .ql_cart_wrap:hover .ql_cart-btn {
   background-color: #fff;
