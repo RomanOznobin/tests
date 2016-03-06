@@ -14,7 +14,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script type='text/javascript' src='http://sili.moscow-n.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <script type='text/javascript' src='http://soliton.moscow-n.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 
    <!-- WP_Head -->
     	<?php wp_head(); ?>
@@ -41,14 +41,14 @@
                     floatElement.style.position = 'fixed';
                     floatElement.style.top = '0';
                     floatElement.style.right = '0px';
-                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.08)';
+                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
                 }
             } else {
                 if (floatElement.style.position === 'fixed') {
                     floatElement.style.position = 'relative';
                     floatElement.style.top = '';
                     floatElement.style.right = '';
-                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.04)';
+                    floatElement.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
                 }
             }
         };
@@ -77,7 +77,7 @@
 
                             <div class="logo_container">
                                 <a href="<?php echo home_url(); ?>/" class="ql_logo google-font">
-                                <img src="http://sili.moscow-n.ru/wp-content/images/logo2.png" />
+                                <img src="http://sili.moscow-n.ru/wp-content/images/l.png" />
                                 <?php // bloginfo('name'); ?>
                                 </a>
                                 <button id="ql_nav_btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ql-navigation" aria-expanded="false">
